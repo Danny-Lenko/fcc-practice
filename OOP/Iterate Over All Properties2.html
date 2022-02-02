@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function Dog(name) {
+         this.name = name;
+      }
+
+      Dog.prototype.numLegs = 4;
+
+      let beagle = new Dog("Snoopy");
+
+      let ownProps = [];
+      let prototypeProps = [];
+
+      // Only change code below this line
+
+      for (let props in beagle) {
+         if (beagle.hasOwnProperty(props)) {
+            ownProps.push(props);
+         } else {
+            prototypeProps.push(props);
+         }
+      }
+
+      console.log(beagle[ownProps]);
+      console.log(beagle[prototypeProps]);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
